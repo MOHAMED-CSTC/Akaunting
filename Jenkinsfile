@@ -17,3 +17,4 @@ node {
     // Exécute le scan OWASP Dependency-Check
     sh 'dependency-check --project "MyProject" --scan . --format HTML --out target/dependency-check-report.html'
   }
+}
