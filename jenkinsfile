@@ -1,4 +1,4 @@
-node { 
+node {
   // Étape de récupération du code source
   stage('SCM') {
     checkout scm
