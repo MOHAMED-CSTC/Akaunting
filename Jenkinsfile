@@ -17,16 +17,3 @@ node {
     // Exécute le scan OWASP Dependency-Check
     sh 'dependency-check --project "MyProject" --scan . --format HTML --out target/dependency-check-report.html'
   }
-
-  // Étape de construction de l'image avec Podman
-  stage('Build Podman Image') {
-    // Construction de l'image avec Podman (assurez-vous que Podman est installé)
-    sh 'podman build -t myimage:latest .'
-  }
-
-  // Étape de déploiement
-  stage('Deploy') {
-    // Exemple de déploiement, cela peut être modifié selon ton environnement
-    sh 'podman run -d --name mycontainer myimage:latest'
-  }
-}
